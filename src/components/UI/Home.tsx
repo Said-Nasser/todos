@@ -5,8 +5,7 @@ const Home = () => {
         <div className="mt-5">
             <h1 className="display-3 text-center mb-3 mt-5">
                 WELCOME
-                </h1>
-
+            </h1>
             <Link to="/tasks" className="text-center d-block" >
                 <button className="btn btn-lg btn-light">
                     Go To Board!

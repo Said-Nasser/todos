@@ -16,7 +16,7 @@ const ProtectedRoute = (props: propsType) => {
                 />
             ))
         }
-/>
+        />
     );
 }
 

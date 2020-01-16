@@ -1,10 +1,10 @@
 import React from 'react';
-interface task {
+interface propsType {
     index: number,
     text: string,
     onRemove: any
 }
-const Task = (props: task) => {
+const Task = (props: propsType) => {
 
     let removeItem = () => {
         props.onRemove(props.index)
@@ -12,7 +12,8 @@ const Task = (props: task) => {
     return (
         <li>
             <button className="btn btn-default" onClick={removeItem}>
-                <i className="fas fa-trash"></i>
+                {/* <i className="fas fa-trash"></i> */}
+                &#10007;
             </button>
             <p>{props.text}</p>
         </li>

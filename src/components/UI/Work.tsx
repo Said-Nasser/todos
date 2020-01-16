@@ -1,11 +1,9 @@
 import React from 'react';
 import Tasks from './Tasks';
-
-const Work = (props: { onAddWork: any, onRemoveWork: any, work: string[] }) => {
+interface propsType { onAddWork: any, onRemoveWork: any, work: string[] }
+const Work = (props: propsType) => {
 
     let _newValue: any;
-
-
 
     let handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -20,6 +18,7 @@ const Work = (props: { onAddWork: any, onRemoveWork: any, work: string[] }) => {
                 <header className="p-3">
                     <h3>Work</h3>
                 </header>
+
                 <Tasks itemsList={props.work} onRemove={props.onRemoveWork} />
 
                 <form className="add-todo" onSubmit={handleSubmit}>
@@ -28,8 +27,8 @@ const Work = (props: { onAddWork: any, onRemoveWork: any, work: string[] }) => {
                             <div className="input-group">
                                 <input className="form-control rounded-0 border-right-0 font-weight-lighter p-4"
                                     type="text" placeholder="Add New Item"
-                                    ref={input => _newValue = input} />
-
+                                    ref={input => _newValue = input}
+                                />
                             </div>
                         </div>
                     </div>

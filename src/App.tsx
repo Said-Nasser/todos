@@ -7,11 +7,10 @@ import Sports from './components/containers/Sports';
 import Work from './components/containers/Work';
 import Entertainment from './components/containers/Entertainment';
 import Login from './components/containers/Login';
-// import Profile from './components/UI/Profile';
 import ProtectedRoute from './components/containers/ProtectedRoute';
 
 function App() {
-  let catergoriesWrapper = () => {
+  let catergoriesWrapper = (): JSX.Element => {
     return (
       <div className="row">
         <Sports />
@@ -20,29 +19,14 @@ function App() {
       </div>
     )
   }
-  let wrapper = (Component: any) => {
-    return <Component />
-  }
+
   return (
     <Router>
       <Header />
       <div className="container">
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/login" exact render={() => (wrapper(Login))} />
-          {/* <Route path="/profile" exact component={Profile} /> */}
-          {/* <Route path="/profile" exact render={(props: any) =>
-            props.loggedIn ? (
-              Profile
-            ) : (
-                <Redirect
-                  to={{
-                    pathname: "/login",
-                    state: { from: props.location }
-                  }}
-                />
-              )
-          } /> */}
+          <Route path="/login" exact component={Login} />
           <Route path="/tasks" exact render={() => (catergoriesWrapper())} />
           <ProtectedRoute />
           <Route path="*" component={NotFound} />

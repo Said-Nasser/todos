@@ -1,12 +1,11 @@
 import React from 'react';
 import Tasks from './Tasks';
 
+interface propsType { onAddEntertainment: any, onRemoveEntertainment: any, entertainment: string[] }
 
-const Entertainment = (props: { onAddEntertainment: any, onRemoveEntertainment: any, entertainment: string[] }) => {
+const Entertainment = (props: propsType) => {
 
     let _newValue: any;
-
-
 
     let handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -29,8 +28,8 @@ const Entertainment = (props: { onAddEntertainment: any, onRemoveEntertainment: 
                             <div className="input-group">
                                 <input className="form-control rounded-0 border-right-0 font-weight-lighter p-4"
                                     type="text" placeholder="Add New Item"
-                                    ref={input => _newValue = input} />
-
+                                    ref={input => _newValue = input}
+                                />
                             </div>
                         </div>
                     </div>

@@ -6,7 +6,7 @@ interface actionType {
     payload?: string | number
 }
 
-export const sports = (state = [], action: actionType) => {
+export const sports = (state: string[] = [], action: actionType) => {
 
     switch (action.type) {
 
@@ -25,7 +25,7 @@ export const sports = (state = [], action: actionType) => {
     }
 
 }
-export const work = (state = [], action: actionType) => {
+export const work = (state: string[] = [], action: actionType) => {
 
     switch (action.type) {
 
@@ -44,7 +44,7 @@ export const work = (state = [], action: actionType) => {
     }
 
 }
-export const entertainment = (state = [], action: actionType) => {
+export const entertainment = (state: string[] = [], action: actionType) => {
 
     switch (action.type) {
 
@@ -63,7 +63,7 @@ export const entertainment = (state = [], action: actionType) => {
     }
 
 }
-export const login = (state = false, action: actionType | any) => {
+export const login = (state: boolean = false, action: actionType | any) => {
 
     switch (action.type) {
 

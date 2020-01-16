@@ -26,7 +26,7 @@ const Header = (props: propsType) => {
                             <Link to="/login" className={`nav-item nav-link login ${props.loggedIn ? "d-none" : ""}`}>
                                 Login
                             </Link>
-                            <Link to="/login" onClick={logout} className={`nav-item nav-link logout ${props.loggedIn? "": "d-none"}`}>
+                            <Link to="/login" onClick={logout} className={`nav-item nav-link logout ${props.loggedIn ? "" : "d-none"}`}>
                                 Logout
                             </Link>
                             <Link to="/profile" className="nav-item nav-link">

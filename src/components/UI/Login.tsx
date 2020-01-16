@@ -4,11 +4,12 @@ interface propsType {
     loggedIn: boolean,
     onLogin: any
 }
+
+
 const Login = (props: propsType) => {
 
 
     let history = useHistory();
-    // let history = props.history();
     let from = { pathname: "/profile" };
 
 
@@ -36,7 +37,7 @@ const Login = (props: propsType) => {
                 <h1 className="display-4 text-center mb-3">
                     Login
                 </h1>
-                <p id="warning-message"><i className="fas fa-exclamation-circle"></i> Wrong Credentials.</p>
+                <p id="warning-message">Wrong Credentials.</p>
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
                         <label>Username</label>
@@ -46,9 +47,9 @@ const Login = (props: propsType) => {
                     <div className="form-group">
                         <label>Password</label>
                         <input type="password" className="form-control" placeholder="password" required
-                            ref={input => _password = input} />
+                            ref={input => _password = input} 
+                        />
                     </div>
-
                     <button className="btn btn-lg btn-block btn-primary">
                         Sign in
                     </button>
