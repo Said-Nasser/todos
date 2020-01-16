@@ -1,0 +1,91 @@
+body {
+    background: linear-gradient(
+        135deg,
+        rgba(179, 220, 237, 1) 0%,
+        rgba(41, 184, 229, 1) 76%,
+        rgba(41, 184, 229, 1) 92%,
+        rgba(41, 184, 229, 1) 100%
+    );
+    // background: linear-gradient(#3eb9de, #3a80de);
+    min-height: 100vh;
+    padding-bottom: 3rem;
+}
+
+.sports,
+.entertainment,
+.work {
+    margin-top: 3rem;
+    padding-bottom: 1rem;
+    background-color: #e5eff5;
+    border-radius: 10px;
+    ul {
+        list-style: none;
+        padding-inline-start: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    li {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 10px 15px 10px 10px;
+        margin: 10px 0;
+        position: relative;
+        &:hover button {
+            color: rgb(255, 0, 0);
+            opacity: 1;
+        }
+        p {
+            margin: 0;
+        }
+        button {
+            position: absolute;
+            top: -3px;
+            right: -3px;
+            color: rgb(255, 0, 0);
+            font-size: 0.9rem;
+            opacity: 0.5;
+            &:hover {
+                color: rgb(255, 0, 0);
+                opacity: 1;
+            }
+        }
+    }
+    form input {
+        background-color: rgba($color: #fff, $alpha: 0.7);
+        margin: 5px 10px;
+        border-radius: 30px !important;
+    }
+}
+
+.profile {
+    background-color: rgba($color: #ffffff, $alpha: 0.8);
+}
+
+a.avatar {
+    margin-left: -0.75rem;
+    .avatar-img {
+        border: 2px solid #fff;
+    }
+    .more {
+        padding: 2px;
+        border: 2px solid #fff;
+        color: #fff;
+    }
+}
+.profile-header {
+    .avatar > img {
+        border: 3px solid #fff;
+    }
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+#warning-message {
+    color: red;
+    visibility: hidden;
+}
+#warning-message.visible {
+    visibility: visible;
+}

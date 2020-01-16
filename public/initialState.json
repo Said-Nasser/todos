@@ -1,0 +1,18 @@
+{
+    "sports": [
+        "Play football",
+        "Go swimming",
+        "Go to the gym"
+    ],
+    "work": [
+        "Add new feature",
+        "Ship the code",
+        "Make deployment"
+    ],
+    "entertainment": [
+        "Have a walk",
+        "Go to the beach",
+        "Watch a movie"
+    ],
+    "login": false
+}
